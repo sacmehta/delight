@@ -398,11 +398,15 @@ def delight_transformer_lm_wiki103(args):
     scale_attn_drop = 0.1
     scale_attn_drop_d_m = round(scale_attn_drop / delta_model_dimension, 2)
     scale_attn_drop_d_m = bound_function(0, 0.1, scale_attn_drop_d_m)
+    
+    scale_delight_drop = 0.1
+    scale_delight_drop_d_m = round(scale_delight_drop / delta_model_dimension, 2)
+    scale_delight_drop_d_m = bound_function(0, 0.1, scale_delight_drop_d_m)
 
     args.dropout = getattr(args, "dropout", scale_dropout_d_m)
     args.delight_emb_dropout = getattr(args, "delight_emb_dropout", 0.1)  # We used a fixed value
     args.attention_dropout = getattr(args, "attention_dropout", scale_attn_drop_d_m)
-    args.delight_dropout = getattr(args, "delight_dropout", 0.0)
+    args.delight_dropout = getattr(args, "delight_dropout", scale_delight_drop_d_m)
     args.pe_dropout = getattr(args, "pe_dropout", 0.1)  # We used a fixed value
     args.activation_dropout = getattr(args, "activation_dropout", 0.0)  # we didn't use it
     args.ffn_dropout = getattr(args, "ffn_dropout", scale_dropout_d_m)

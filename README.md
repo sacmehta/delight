@@ -32,7 +32,7 @@ and [DeLighT](https://arxiv.org/pdf/2008.00623.pdf).
 * **To use DeLighT, you need to install fairseq** and develop locally:
 ```bash
 git clone https://github.com/sacmehta/delight
-cd fairseq
+cd delight
 pip install --editable ./
 ```
 * **For faster training** install NVIDIA's [apex](https://github.com/NVIDIA/apex) library:

@@ -21,7 +21,7 @@ if [ "$DATASET" == "wmt14_en_de" ]; then
     fairseq-preprocess \
         --source-lang en --target-lang de \
         --trainpref $TEXT/train --validpref $TEXT/valid --testpref $TEXT/test \
-        --destdir data-bin/wmt17_en_de --thresholdtgt 0 --thresholdsrc 0 \
+        --destdir data-bin/wmt14_en_de --thresholdtgt 0 --thresholdsrc 0 \
         --workers 20 --joined-dictionary
 ##
 ## WMT14 En2Fr dataset

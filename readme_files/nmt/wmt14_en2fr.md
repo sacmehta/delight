@@ -28,7 +28,7 @@ where `--d-m` is the model dimension. In our experiments, we have only tested `d
 To evaluate a model, you can use the following command:
 
 ```
-python generate.py data-bin/wmt14_en_de/ --path <results_dir>/checkpoint_best.pt --beam 5 --lenpen 0.9 --remove-bpe --batch-size 128 --quiet
+python generate.py data-bin/wmt14_en_fr/ --path <results_dir>/checkpoint_best.pt --beam 5 --lenpen 0.9 --remove-bpe --batch-size 128 --quiet
 ```
 
 ## Results
